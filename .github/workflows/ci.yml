@@ -18,7 +18,7 @@ jobs:
         run: npm test
   lint:
     name: Lint
-    runs-out: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2.0.0
