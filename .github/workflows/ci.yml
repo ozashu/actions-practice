@@ -6,8 +6,11 @@ jobs:
     name: Unit Test
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-lates, macos-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
         node: [10, 12]
+        exclude:
+          - os : mac-latest
+            node: 10
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
